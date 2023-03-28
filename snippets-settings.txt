@@ -1,0 +1,67 @@
+{
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "-shell-escape",
+        "%DOC%"
+    ],
+    "env": {}
+},
+
+"workbench.colorTheme": "Ayu Dark",
+
+"latex-workshop.latex.tools": []
+"latex-workshop.latex.recipe.default": "lastUsed",
+"latex-workshop.view.pdf.invert": 0.9,
+"editor.fontLigatures": true,
+"latex-workshop.latex.autoClean.run": "onBuilt",
+"latex-workshop.latex.autoBuild.run": "never",
+"latex-workshop.view.pdf.viewer": "tab",
+"editor.suggest.snippetsPreventQuickSuggestions": false,
+
+"inline Math \\( ... \\)": {
+    "prefix": "ds",
+    "body": "\\($1\\)$0",
+    "description": "Inline Math with Bracket Delimiters"
+},
+"display Math \\[ ... \\]": {
+    "prefix": "fd",
+    "body": ["\\[$1\\]$0"],
+    "description": "Display Math with Bracket Delimiters"
+},
+
+"math mode text": {
+    "prefix": "tx",
+    "body": ["\\text{$1}$0"],
+    "description":"text in mathmode"
+},
+
+"mod": {
+    "prefix": "mm",
+    "body": ["\\mod{$1}$0"],
+    "description":"mod"
+},
+
+
+"leqslant": {
+    "prefix": "@<<",
+    "body": ["\\leqslant"],
+    "description":"<="
+},
+
+"geqslant": {
+    "prefix": "@>>",
+    "body": ["\\geqslant"],
+    "description":">="
+},
+
+"dfrac": {
+    "prefix": "@df",
+    "body": ["\\dfrac{$1}{$2}$0"],
+    "description":"dfrac"
+},
